@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <form action="menu.php" method="post">
 
-    <label for="">-----MENÚ-------</label><br>
+    <h1 for="">-----MENÚ-------</h1><br>
     1. Lectura de datos<br>
     2. Crear Objeto<br>
     3. Mostrar Objeto<br>
@@ -24,7 +25,7 @@
     12. Iterar array con Objetos con FOR <br>
     13. Iterar array con objetos con ForEach <br>
     14. Iterar array con objetos con Map y crear copia <br>
-    15.Proceso personal <br>
+    15. Reiniciar <br>
     <input type="number" name="opcion" id=""> ingrese la opcion 
     <input type="submit" value="Send">
     
@@ -56,44 +57,49 @@
             echo "Creaste el objeto Automoviles";
             break;
         case '3':
-            class Carro {
-                private $marca;
-                private $modelo;
-                private $color;
-              
-                public function __construct($marca, $modelo, $color) {
-                  $this->marca = $marca;
-                  $this->modelo = $modelo;
-                  $this->color = $color;
-                }
-              
-                public function obtenerMarca() {
-                  return $this->marca;
-                }
-              
-                public function obtenerModelo() {
-                  return $this->modelo;
-                }
-              
-                public function obtenerColor() {
-                  return $this->color;
-                }
-              
-                public function imprimirDetalles() {
-                  echo "Marca: " . $this->marca . ", Modelo: " . $this->modelo . ", Color: " . $this->color . "";
-                }
-              }
-              
-              // Crear un objeto Carro
-              $miCarro = new Carro("Toyota", "Corolla", "Rojo");
-              
-              // Obtener y mostrar los detalles del carro
-              echo $miCarro->obtenerMarca() . "<br>";
-              echo $miCarro->obtenerModelo() . "<br>";
-              echo $miCarro->obtenerColor() . "<br>";
-              
-              // Imprimir los detalles del carro
-             $miCarro->imprimirDetalles();
+          
+
+          class Carro {
+            private $marca;
+            private $modelo;
+            private $color;
+          
+            public function __construct($marca, $modelo, $color) {
+              $this->marca = $marca;
+              $this->modelo = $modelo;
+              $this->color = $color;
+            }
+          
+            public function obtenerMarca() {
+              return $this->marca;
+            }
+          
+            public function obtenerModelo() {
+              return $this->modelo;
+            }
+          
+            public function obtenerColor() {
+              return $this->color;
+            }
+          
+            public function imprimirDetalles() {
+              echo "<br>Marca: " . $this->marca . "<br> Modelo: " . $this->modelo . "<br> Color: " . $this->color . "<br>"  ;
+            }
+          }
+          
+          // Crear un objeto Carro
+          $miCarro = new Carro("Toyota", "Corolla", "Rojo");
+          
+          // Obtener y mostrar los detalles del carro
+          /* echo $miCarro->obtenerMarca() . "\n";
+          echo $miCarro->obtenerModelo() . "\n";
+          echo $miCarro->obtenerColor() . "\n"; */
+          
+          // Imprimir los detalles del carro
+          $miCarro->imprimirDetalles();
+          
+          
+          
         default:
             # code...
             break;
